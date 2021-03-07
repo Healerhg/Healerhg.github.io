@@ -1,0 +1,57 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <title>HealerValues</title>
+    <link rel="icon" type="x-icon" href="icon.png">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Healer_hg test</h1>
+    <hr>
+    <img src="compass.png" id="banner">
+    <button class="button" onclick="location.href='instructions.html';" style="font-size:36pt;">Clica aqui para começar!</button>
+    
+    <h2>O que se trata este teste?</h2>
+        <p>O meu teste consiste, numa revisão do compasso do sapplyvalues, com perguntas mais coerentes e com o objetivo de apresentar o resultado mais seguro possivel <a href="https://sapplyvalues.github.io/">SapplyValues test</a>. Serás apresentado a uma pergunta, em que possuis as respostas, a partir de <b>Concordo fortemente</b> a <b>Discordo fortemente</b>, com cada resposta a'fetar pouco a pouco o resultado. no final do questionário, serás apresentado por um compasso político.<br /><br />
+        * As perguntas foram totalmente reescritas, sendo que muitas delas não fazem de uma pessoa acreditar totalmente numa coisa, ou até desacerditar, inclusivo algumas perguntas, principalmente presentes no famoso teste <a href="https://www.politicalcompass.org/">political compass</a>, que apresenta algumas questões um bocado fortes, e que raramente alguem diria concorco a falar a sério.</br></br>
+        Existem <b><u><span id="numOfQuestions"></span></u></b> perguntas no teste.</p>
+    <h2>Porque usar esta versão?</h2>
+    <p>O teste <a href="https://www.politicalcompass.org/">political compass</a>, apresenta como já mencionado, imensas perguntas radicais... Em geral o teste é muito biased (preconceituoso), de esquerda, como por exemplo uma das perguntas presentes nesse teste é se a nossa raça é superior a todas as outras... tipo porquê que vais colocar esta pergunta.</br></br>
+    Já o <a href="https://8values.github.io/">8values</a>, <a href="https://9axes.github.io/">9axes</a> e <a href="https://sapplyvalues.github.io/">sapply values</a>, são muito melhores que o original, sendo até muito mais neutros... Devo dizer que estas versões, incluindo as versões do <a href="https://www.idrlabs.com/">IDR labs</a>, conseguem ser extremamente accurate (Não minha opinião honesta)... tem até uma outra versão que é o <a href="https://compasshub.xyz/">compass hub</a>, que por de forma está muito engraçado, mas se vocês forem dar uma vista de olhos aparenta ser muito aparvalhado, e muitos dos testes aparentam não ser testes a sérios, e muitos deles não devem ser usados para tentar procurar a sua localização politica.</br></br>
+    Acho que eles não apresentam um grande resultado, e apesar de existir testes ótimos eu acho que eles nunca irão responder a perguntas exatas, algumas das perguntas apresentadas na maioria dos testes que eu falei, fala de questões pessoais, que podem mudar de pessoa para pessoa, e nada têm a ver com a orientação politica pessoal... </br></br>
+    ...E tambem porque tenho um trabalho escolar, e por isso decidi fazer isto...</p>
+    <h2>A tuas questões / Respostas não são lá grande coisa!</h2>
+    <p>Se honestamente pensas isso, então eu só digo as minhas sinceras desculpas, se a maioria acreditar isso, então é porque falhei no meu prpósito de fazer um teste decente.</p>
+
+    <h2>Nota do criador</h2>
+    <p>Este teste foi desenvolvido pelo ativista politico <a href="https://twitter.com/Healer_hg">Healer_HG</a></br></br></p>
+
+    <p>Este teste, está no seu estágio alpha... É normal que tenha alguns problemas com perguntas e resultados. </br></br>
+        Peço perdão por qualquer irritação ou mal entendido causado...</p>
+	
+    <h2>Nota legal</h2>
+    <p>A licensa dos projetos 8values e 9axis, garante o direito a "modificar, misturar, publciar, distribuir" o software desde que "O artigo de direitos de autor apresentado ai em cima, seja incluido em todas e quaisquer copias, totais ou substanciais do software." O artigo apresentado, pode ser encontrado <a href="https://github.com/8values/8values.github.io/blob/master/LICENSE">aqui</a>. Este projeto é lançado dentro da mesma licensa.</p>
+    
+    <script type="application/javascript" src="questions.js"></script>
+    <script type="text/javascript">
+        document.getElementById("numOfQuestions").innerHTML = questions.length;
+
+        window.onload = function() {
+            var background = new Image();
+            background.onload = function() {
+                var c = document.createElement("canvas");
+                c.width = 1850;
+                c.height = 1300;
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#EEEEEE"
+                ctx.fillRect(0, 0, 1850, 1300);
+                ctx.drawImage(background, 0, 0);
+    
+                document.getElementById("banner").src = c.toDataURL();
+            }
+            background.src = "./compass.png";
+        }
+    </script>
+</body>
